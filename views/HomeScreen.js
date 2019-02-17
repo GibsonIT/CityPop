@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text} from 'react-native'
 import Button from '../components/Button'
+import Title from '../components/Title'
 
 /**
  * @class
@@ -14,7 +15,7 @@ class HomeScreen extends Component{
         return(
             <View style = {{flex: 1}}>
                 <View style = {{flex: 3, justifyContent:'center'}}>
-                    <Text>CityPop</Text>
+                    <Title title = "CityPop"/>
                 </View>
                 <View style = {{flex: 5,  alignItems: 'stretch', justifyContent:'center'}}>
                     <Button title = "SEARCH BY CITY" onPress = {() => console.log('City')}/>
