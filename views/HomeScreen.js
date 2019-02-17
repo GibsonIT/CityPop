@@ -1,5 +1,12 @@
 import React, {Component} from 'react'
-import {View, Button, Text} from 'react-native'
+import {View, Text} from 'react-native'
+import Button from '../components/Button'
+
+/**
+ * @class
+ * @classdesc Class that is a component that presents a screen with a title and two buttons 
+ * @extends React.Component  
+ */
 
 class HomeScreen extends Component{
 
