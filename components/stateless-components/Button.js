@@ -1,6 +1,8 @@
 import React from 'react'
 import {TouchableHighlight, Text} from 'react-native'
 import PropTypes from 'prop-types'
+import panelStyles from '../../modules/Styles'
+import {colors} from '../../modules/StyleBase'
 
 
 /**
@@ -9,8 +11,11 @@ import PropTypes from 'prop-types'
 
 const Button = ({title, onPress}) => {
     return(
-        <TouchableHighlight onPress = {onPress} style = {{flex: 1}}>
-            <Text style = {{fontSize: 25}}>{title}</Text>
+        <TouchableHighlight onPress = {onPress} 
+        style = {[panelStyles.button, panelStyles.container]}
+        underlayColor = {colors.primary_dark}
+        >
+            <Text style = {[panelStyles.standardText, panelStyles.standardAlignment]}>{title}</Text>
         </TouchableHighlight>
     )
 }
