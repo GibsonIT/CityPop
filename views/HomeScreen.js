@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native'
 import Button from '../components/Button'
-import Title from '../components/Title'
+import TitleContentDivider from '../components/partial_views/TitleContentDivider'
 
 /**
  * @class
@@ -13,16 +12,12 @@ class HomeScreen extends Component{
 
     render(){
         return(
-            <View style = {{flex: 1}}>
-                <View style = {{flex: 3, justifyContent:'center'}}>
-                    <Title title = "CityPop"/>
-                </View>
-                <View style = {{flex: 5,  alignItems: 'stretch', justifyContent:'center'}}>
-                    <Button title = "SEARCH BY CITY" onPress = {() => console.log('City')}/>
+    
+            <TitleContentDivider title = "cityPop" contentAlignment = 'center'>
+                <Button title = "SEARCH BY CITY" onPress = {() => this.props.navigation.navigate("City")}/>
                             
-                    <Button title = "SEARCH BY COUNTRY" onPress = {() => console.log('Country')}/>                
-                </View>
-            </View>
+                <Button title = "SEARCH BY COUNTRY" onPress = {() => console.log('Country')}/>     
+            </TitleContentDivider>
         )
     }
 
