@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import SearchScreen from '../components/partial_views/SearchScreen'
+import {searchCountry, searchCityInCountry} from '../modules/GeoSearch'
+
 
 /**
  * @class CountrySearchScreen
@@ -15,8 +17,19 @@ class CountrySearchScreen extends Component {
     }
 
     /** logs text when searchbutton is pressed */
-    onSearch(text){
+    async onSearch(text){
         console.log(text);
+
+        let data = await searchCountry(text);
+
+        if(data == null) return;
+
+        data = await searchCityInCountry(data);
+
+        console.log(data);
+
+        let dddd = data;
+        this.props.navigation.navigate("DisplayCities", {country: text.toUpperCase(), data: dddd})
 
     }
 

@@ -19,7 +19,7 @@ import PropTypes from 'prop-types'
         let p = this.props;
         return(
             <View style = {{flex: 1}}>
-                <View style = {{flex: p.titleFlex}}>
+                <View style = {{flex: p.titleFlex, alignItems: 'center'}}>
                     <Title title = {p.title}/>
                 </View>
                 <View style = {{flex: p.contentFlex,  alignItems: p.contentAlignment}}>
@@ -51,7 +51,7 @@ TitleContentDivider.defaultProps = {
     /** Default title to content division is 3:5  with alignment 'stretch'*/
     titleFlex: 3,
     contentFlex: 5,
-    contentAlignment: 'stretch'
+    contentAlignment: 'center'
 }
 
 
