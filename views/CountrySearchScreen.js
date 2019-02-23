@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import SearchScreen from '../components/partial_views/SearchScreen'
-import {searchCountry, searchCityInCountry} from '../modules/GeoSearch'
+import {searchCountry, searchCityInCountry} from '../services/GeoSearch'
 import ErrorText from '../components/stateless-components/ErrorText'
 
 
