@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Text} from 'react-native'
-import TitleContentDivider from '../components/partial_views/TitleContentDivider';
+import TitleContentDivider from '../components/partial_views/TitleContentDivider'
+import DisplayBox from '../components/stateless-components/DisplayBox'
 
 /**
  * Displays the City name as a title then the population of the city below
@@ -30,8 +31,8 @@ class CityPopulationScreen extends Component{
     render(){
         return(
             <TitleContentDivider title = {this.state.city} contentAlignment = 'center'>
-                <Text>POPULATION</Text>
-                <Text>{this.formatNumber(this.state.population)}</Text>
+               
+                <DisplayBox title = 'POPULATION' text = {this.formatNumber(this.state.population)}/>
             </TitleContentDivider>
         )
 
