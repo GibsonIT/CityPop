@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {TextInput} from 'react-native';
 import PropTypes from 'prop-types'
-import Button from '../stateless-components/Button'
 import TitleContentDivider from './TitleContentDivider';
 import LoadingModal from '../modals/LoadingModal'
 import SearchButton from '../stateless-components/SearchButton'
+import TextField from '../stateless-components/TextField'
 
 /**
  * Meant to be used over the whole screen. Presents a screen with a title, a search bar and a search button.
@@ -39,9 +39,9 @@ class SearchScreen extends Component{
 
                     <LoadingModal loading = {this.props.loading}/>
                         
-                    <TextInput placeholder = {placeholder} onChangeText = {this.setText}/>
+                    <TextField placeholder = {placeholder} onChange = {this.setText}/>
 
-                        <SearchButton onPress = {() => onPress(this.state.text)}/>
+                    <SearchButton onPress = {() => onPress(this.state.text)}/>
 
                     {this.props.children}
 
