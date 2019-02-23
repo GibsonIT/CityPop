@@ -14,7 +14,7 @@ export const colors  = {
 }
 
 export const padding = {
-  sm: 10,
+  sm: 0,
   md: 20,
   lg: 30,
   xl: 40
@@ -29,7 +29,7 @@ export const margins = {
 
 export const fonts = {
   sm: 18,
-  md: 28,
+  md: 22,
   lg: 38,
   xl: 50,
   primary: 'sans-serif-medium'

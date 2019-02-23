@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text, View} from 'react-native'
+import panelStyles from '../../modules/Styles'
 
 
 /**
@@ -7,9 +8,10 @@ import {Text, View} from 'react-native'
  * @param {string} title - the text to be displayed
  */
 const Title = ({title}) => {
+    const style = panelStyles
     return(
-        <View style = {{flex:1, justifyContent: 'center'}}>
-            <Text style = {{fontSize: 35}}>
+        <View style = {[style.container, style.standardAlignment]}>
+            <Text style = {[style.title, style.standardAlignment]}>
                 {title}
             </Text>
         </View>

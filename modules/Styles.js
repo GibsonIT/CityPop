@@ -5,7 +5,7 @@ import {StyleSheet} from 'react-native'
 const panelStyles = StyleSheet.create({
   container: {
     paddingHorizontal: padding.sm,
-    paddingVertical: padding.lg,
+    paddingVertical: padding.md,
     width: (dimensions.fullWidth * 0.95)
   },
 
@@ -22,7 +22,7 @@ const panelStyles = StyleSheet.create({
   button:{
       borderColor: colors.primary,
       borderWidth: 3,
-      margin: margins.md
+      margin: margins.sm,
   },
 
   standardAlignment: {
@@ -32,10 +32,19 @@ const panelStyles = StyleSheet.create({
     textAlignVertical: 'center'
   },
 
-  standardText:{
+  standardText: {
       color: colors.primary,
       fontFamily: fonts.primary,
-      fontSize: fonts.sm
+      fontSize: fonts.md
+  },
+
+  title: {
+    paddingHorizontal: padding.sm,
+    paddingVertical: padding.lg,
+    width: (dimensions.fullWidth * 0.7),
+    color: colors.primary,
+    fontFamily: fonts.primary,
+    fontSize: fonts.lg
   }
 })
 
