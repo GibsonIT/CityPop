@@ -9,11 +9,15 @@ import TitleContentDivider from '../components/partial_views/TitleContentDivider
  */
 
 class HomeScreen extends Component{
+    /** Removes the title on the header */
+    static navigationOptions = {
+        headerTitle: null
+    }
 
     render(){
         return(
     
-            <TitleContentDivider title = "cityPop" contentAlignment = 'center'>
+            <TitleContentDivider title = "CityPop" contentAlignment = 'center'>
                 <Button title = "SEARCH BY CITY" onPress = {() => this.props.navigation.navigate("City")}/>
                             
                 <Button title = "SEARCH BY COUNTRY" onPress = {() => this.props.navigation.navigate('Country')}/>     
