@@ -49,7 +49,7 @@ export async function searchCity(cityName){
  */
 export async function searchCountry(countryName){
     URL = 'http://api.geonames.org/searchJSON?name_equals=' + countryName + '&featureClass=A&orderby=population&maxRows=5&username=weknowit';
-    return search(URL, countryName, parseCountryToCode);
+    return search(URL, countryName, convertToCountryCode);
 }
 
 /**
@@ -58,6 +58,6 @@ export async function searchCountry(countryName){
  * @returns A Promise object with data in the form of an array: [cityName1, population1, CityName2, population2, ... cityNameX, populationX]
  */
 export async function searchCityInCountry(countryCode){
-    URL = 'http://api.geonames.org/searchJSON?country=' + countryCode + '&featureClass=P&orderby=population&maxRows=5&username=weknowit';
-    return search(URL, countryCode, parseCityToName);
+    URL = 'http://api.geonames.org/searchJSON?country=' + countryCode + '&featureClass=P&orderby=population&maxRows=25&username=weknowit';
+    return search(URL, countryCode, convertToName);
 }
