@@ -16,7 +16,7 @@ class HomeScreen extends Component{
             <TitleContentDivider title = "cityPop" contentAlignment = 'center'>
                 <Button title = "SEARCH BY CITY" onPress = {() => this.props.navigation.navigate("City")}/>
                             
-                <Button title = "SEARCH BY COUNTRY" onPress = {() => console.log('Country')}/>     
+                <Button title = "SEARCH BY COUNTRY" onPress = {() => this.props.navigation.navigate('Country')}/>     
             </TitleContentDivider>
         )
     }
