@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Button from '../stateless-components/Button'
 import TitleContentDivider from './TitleContentDivider';
 import LoadingModal from '../modals/LoadingModal'
+import SearchButton from '../stateless-components/SearchButton'
 
 /**
  * Meant to be used over the whole screen. Presents a screen with a title, a search bar and a search button.
@@ -40,7 +41,7 @@ class SearchScreen extends Component{
                         
                     <TextInput placeholder = {placeholder} onChangeText = {this.setText}/>
 
-                        <Button title = "Search" onPress = {() => onPress(this.state.text)}/>
+                        <SearchButton onPress = {() => onPress(this.state.text)}/>
 
                     {this.props.children}
 
