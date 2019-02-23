@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import {Text} from 'react-native'
 import SearchScreen from '../components/partial_views/SearchScreen'
 import {searchCountry, searchCityInCountry} from '../modules/GeoSearch'
+import ErrorText from '../components/stateless-components/ErrorText'
+
 
 
 /**
@@ -50,8 +51,12 @@ class CountrySearchScreen extends Component {
     /** Renders the screen */
     render(){
         return(
-            <SearchScreen title = 'SEARCH BY COUNTRY' placeholder = 'Enter a country' onPress = {this.onSearch} loading = {this.state.isLoading}>
-                <Text>{this.state.errorMsg}</Text>
+            <SearchScreen title = 'SEARCH BY COUNTRY' 
+                placeholder = 'Enter a country' 
+                onPress = {this.onSearch} l
+                oading = {this.state.isLoading}
+            >
+                <ErrorText text = {this.state.errorMsg}/>
             </SearchScreen>
         )
     }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Text} from 'react-native'
 import SearchScreen from '../components/partial_views/SearchScreen'
 import {searchCity} from '../modules/GeoSearch'
+import ErrorText from '../components/stateless-components/ErrorText'
 
 /**
  * @class CitySearchScreen
@@ -33,7 +33,10 @@ class CitySearchScreen extends Component{
         //fetch the data
         let data = await searchCity(text);
 
-        this.setState({ isLoading: false})
+        this.setState({
+             isLoading: false,
+             errorMsg: ''
+        })
         
         if(data == null){
             this.setState({ errorMsg: 'No results found'})
@@ -48,8 +51,12 @@ class CitySearchScreen extends Component{
      */
     render(){
         return(
-            <SearchScreen title = 'SEARCH BY CITY' placeholder = 'Enter a city' onPress = {this.onSearch} loading = {this.state.isLoading}>
-                <Text>{this.state.errorMsg}</Text>
+            <SearchScreen title = 'SEARCH BY CITY' 
+                placeholder = 'Enter a city' 
+                onPress = {this.onSearch} 
+                loading = {this.state.isLoading}
+            >
+                <ErrorText text = {this.state.errorMsg}/>
             </SearchScreen>
         )
     }
