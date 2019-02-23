@@ -1,12 +1,10 @@
 import React from 'react'
 import {TouchableHighlight, Text} from 'react-native'
+import PropTypes from 'prop-types'
 
 
 /**
- * Button returns a component that is a pressable button that calls onPress when pressed
- * 
- * @param {string} title - text to be displayed on the button
- * @param {function} onPress - callback function without parameters to be called when button is pressed  
+ * Button returns a stateless component that is a pressable button that calls onPress when pressed
  */
 
 const Button = ({title, onPress}) => {
@@ -16,5 +14,13 @@ const Button = ({title, onPress}) => {
         </TouchableHighlight>
     )
 }
+
+Button.propTypes = {
+    /** title - text to be displayed on the button*/ 
+    title: PropTypes.string, 
+    /** onPress - required function with no parameters to be called when button is pressed */
+    onPress: PropTypes.func.isRequired 
+}
+
 
 export default Button;
