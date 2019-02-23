@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
-import {View, TextInput} from 'react-native'
-import Button from '../components/Button'
-import Title from '../components/Title'
+import SearchScreen from '../components/partial_views/SearchScreen'
 
 /**
  * @class CitySearchScreen
@@ -33,20 +31,7 @@ class CitySearchScreen extends Component{
      */
     render(){
         return(
-            <View style = {{flex: 1}}>
-                <View style = {{flex: 3, justifyContent:'center'}}>
-                    <Title title = "CityPop"/>
-                </View>
-                <View style = {{flex: 5,  alignItems: 'stretch', justifyContent:'center'}}>
-
-                    <TextInput
-                     placeholder = "Enter a city"
-                     onChangeText = {(text) => this.onChange(text)}
-                     />               
-
-                    <Button title = "SEARCH" onPress = {() => console.log('Search')}/>                
-                </View>
-            </View>
+            <SearchScreen title = 'SEARCH BY CITY' placeholder = 'Enter a city' onPress = {this.onChange}/>
         )
     }
 }
