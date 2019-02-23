@@ -3,6 +3,7 @@ import {TextInput} from 'react-native';
 import PropTypes from 'prop-types'
 import Button from '../stateless-components/Button'
 import TitleContentDivider from './TitleContentDivider';
+import LoadingModal from '../modals/LoadingModal'
 
 /**
  * Meant to be used over the whole screen. Presents a screen with a title, a search bar and a search button.
@@ -34,6 +35,8 @@ class SearchScreen extends Component{
 
         return(
                 <TitleContentDivider title = {title}>
+
+                    <LoadingModal loading = {this.props.loading}/>
                         
                     <TextInput placeholder = {placeholder} onChangeText = {this.setText}/>
 
@@ -57,10 +60,16 @@ SearchScreen.propTypes = {
      * Callback function to be called when the search button is pressed
      * Need to accept a parameter of type string
     */
-    onPress: PropTypes.func.isRequired
+    onPress: PropTypes.func.isRequired,
+
+    /** If the current state is in a loading state */
+    loading: PropTypes.bool
 }
 
 /** Default values of the props */
-SearchScreen.defaultProps = { placeholder: 'Enter text'}
+SearchScreen.defaultProps = { 
+    placeholder: 'Enter text',
+    loading: false
+}
 
 export default SearchScreen;
