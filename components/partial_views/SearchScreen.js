@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {TextInput} from 'react-native';
 import PropTypes from 'prop-types'
-import Button from '../../components/Button'
+import Button from '../stateless-components/Button'
 import TitleContentDivider from './TitleContentDivider';
 
 /**
@@ -37,7 +37,7 @@ class SearchScreen extends Component{
                         
                     <TextInput placeholder = {placeholder} onChangeText = {this.setText}/>
 
-                    <Button title = "Search" onPress = {() => onPress(this.state.text)}/>
+                        <Button title = "Search" onPress = {() => onPress(this.state.text)}/>
 
                     {this.props.children}
 

@@ -15,20 +15,21 @@ class CitySearchScreen extends Component{
     constructor(props){
         super(props)
         this.state = {text: ''};
-        this.onChange = this.onChange.bind(this);
+        this.onSearch = this.onSearch.bind(this);
     }
 
     /**
-     * Stores and logs the text parameter. Used with text input
-     * @param {string} text - the text that has been changed 
+     * Searches for cities using the text parameter. Used with text input
+     * @param {string} text - the text to be used for search 
      */
-    async onChange(text){
+    async onSearch(text){
         this.setState({text: text});
         console.log(text);
 
+        //fetch the data
         let data = await searchCity(text);
 
-
+        if(data == null) return;
         this.props.navigation.navigate("DisplayPopulation", {city: data[0].toUpperCase(), population: data[1]});       
 
     }
@@ -38,7 +39,7 @@ class CitySearchScreen extends Component{
      */
     render(){
         return(
-            <SearchScreen title = 'SEARCH BY CITY' placeholder = 'Enter a city' onPress = {this.onChange}/>
+            <SearchScreen title = 'SEARCH BY CITY' placeholder = 'Enter a city' onPress = {this.onSearch}/>
         )
     }
 }

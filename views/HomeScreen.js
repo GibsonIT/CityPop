@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Button from '../components/Button'
+import Button from '../components/stateless-components/Button'
 import TitleContentDivider from '../components/partial_views/TitleContentDivider'
 
 /**

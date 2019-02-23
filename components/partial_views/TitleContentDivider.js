@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, Text} from 'react-native'
-import Title from '../../components/Title';
+import Title from '../stateless-components/Title';
 import PropTypes from 'prop-types'
 
 /**
@@ -48,7 +48,7 @@ TitleContentDivider.propTypes = {
 }
 
 TitleContentDivider.defaultProps = {
-    /** Default title to content division is 3:5  with alignment 'stretch'*/
+    /** Default title to content division is 3:5  with alignment 'center'*/
     titleFlex: 3,
     contentFlex: 5,
     contentAlignment: 'center'
