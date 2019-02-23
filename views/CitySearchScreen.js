@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import SearchScreen from '../components/partial_views/SearchScreen'
+import {searchCity} from '../modules/GeoSearch'
 
 /**
  * @class CitySearchScreen
@@ -21,9 +22,15 @@ class CitySearchScreen extends Component{
      * Stores and logs the text parameter. Used with text input
      * @param {string} text - the text that has been changed 
      */
-    onChange(text){
+    async onChange(text){
         this.setState({text: text});
         console.log(text);
+
+        let data = await searchCity(text);
+
+
+        this.props.navigation.navigate("DisplayPopulation", {city: data[0].toUpperCase(), population: data[1]});       
+
     }
 
     /**
