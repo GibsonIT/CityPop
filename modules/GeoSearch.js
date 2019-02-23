@@ -55,7 +55,8 @@ export async function searchCountry(countryName){
 /**
  * Function that searches for cities in a country with country code of the parameter countryCode
  * @param {string} countryCode - country code of the country to be searched in
- * @returns A Promise object with data in the form of an array: [cityName1, population1, CityName2, population2, ... cityNameX, populationX]
+ * @returns A Promise object with data in the form of an array:
+ *  [[cityName1, population1], [CityName2, population2], ... [cityNameX, populationX]]
  */
 export async function searchCityInCountry(countryCode){
     URL = 'http://api.geonames.org/searchJSON?country=' + countryCode + '&featureClass=P&orderby=population&maxRows=25&username=weknowit';
