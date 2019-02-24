@@ -43,9 +43,12 @@ export function convertToName(searchData, countryCode){
              //Separates each element into name and population
              var dataArray = [];
              data.forEach(element => {
-                 if(element.countryCode = countryCode){
-                    dataArray.push([element.name, element.population]);
+                if(element.countryCode = countryCode){
+                    if(element.population == 0){
+                        return dataArray;
                     }
+                    dataArray.push([element.name, element.population]);
+                }
              });
             return dataArray;
         }

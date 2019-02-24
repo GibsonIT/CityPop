@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import SearchScreen from '../components/partial_views/SearchScreen'
 import {searchCountry, searchCityInCountry} from '../services/GeoSearch'
 import ErrorText from '../components/stateless-components/ErrorText'
+import {titleCase} from '../services/StringFormatter'
 
 
 
@@ -26,6 +27,8 @@ class CountrySearchScreen extends Component {
     async onSearch(text){
         this.setState({ isLoading: true });
         console.log(text);
+
+        text = titleCase(text);
 
         let data = await searchCountry(text);
 

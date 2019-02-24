@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Text} from 'react-native'
 import TitleContentDivider from '../components/partial_views/TitleContentDivider'
 import DisplayBox from '../components/stateless-components/DisplayBox'
+import {formatNumber} from '../services/StringFormatter'
 
 /**
  * Displays the City name as a title then the population of the city below
@@ -18,21 +18,11 @@ class CityPopulationScreen extends Component{
             }
     }
 
-    /**
-     * Takes in a number to format with spaces between every third number
-     * Example: 12345678 returns 12 345 678
-     * @param {Number} num - number to format
-     * @returns {string} - formated number
-     */
-    formatNumber(num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
-    }
-
     render(){
         return(
             <TitleContentDivider title = {this.state.city} contentAlignment = 'center'>
                
-                <DisplayBox title = 'POPULATION' text = {this.formatNumber(this.state.population)}/>
+                <DisplayBox title = 'POPULATION' text = {formatNumber(this.state.population)}/>
             </TitleContentDivider>
         )
 
