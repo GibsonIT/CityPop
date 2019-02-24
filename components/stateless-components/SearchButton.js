@@ -2,6 +2,7 @@ import React from 'react'
 import {TouchableHighlight} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import PropTypes from 'prop-types'
+import {searchButton} from '../../modules/ComponentStyles'
 
 
 /**
@@ -11,8 +12,8 @@ import PropTypes from 'prop-types'
 const SearchButton = ({onPress}) => {
 
     return(
-        <TouchableHighlight onPress = {onPress} style = {containerStyle}>
-            <Icon name={"search"}  size={30} color={"#000"} />
+        <TouchableHighlight onPress = {onPress} style = {searchButton.container} underlayColor = {searchButton.color}>
+            <Icon name = {"search"}  size={30} color = {searchButton.color} />
        </TouchableHighlight>
     )
 
@@ -27,14 +28,5 @@ SearchButton.propTypes = {
     onPress: PropTypes.func.isRequired
 }
 
-const  containerStyle = {
-      borderWidth:3,
-       borderColor:'rgba(0,0,0,0.2)',
-       alignItems:'center',
-       justifyContent:'center',
-       width:50,
-       height:50,
-       backgroundColor:'#fff',
-       borderRadius:50
-    }
+
 export default SearchButton;

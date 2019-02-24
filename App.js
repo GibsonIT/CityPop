@@ -6,6 +6,7 @@ import CountrySearchScreen from './views/CountrySearchScreen';
 import CityListScreen from './views/CityListScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React from 'react'
+import {colors} from './modules/StyleBase'
 
 /**
  * Handles the logic of switching between screens
@@ -26,7 +27,7 @@ const MainNavigator = createStackNavigator({
 
   defaultNavigationOptions: {
     headerBackImage: ( 
-      <Icon name={"arrow-left"}  size={30} color={"#000"} />),
+      <Icon name={"arrow-left"}  size={30} color={colors.primary} />),
       
     // Removes the shadow of the header  
      headerStyle: {
@@ -42,7 +43,10 @@ const MainNavigator = createStackNavigator({
       }
   
     ,
-    headerTitle: "CityPop"
+    headerTitle: "CityPop",
+    headerTitleStyle: {
+      color: colors.primary
+    }
   }
 })
 

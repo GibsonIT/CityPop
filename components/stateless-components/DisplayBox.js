@@ -1,6 +1,7 @@
 import React from 'react'
 import {Text, View} from 'react-native'
 import PropTypes from 'prop-types'
+import {displayBox} from '../../modules/ComponentStyles'
 
 
 /**
@@ -11,9 +12,13 @@ import PropTypes from 'prop-types'
 const TextBox = ({title, text}) =>{
 
     return(
-        <View style = {{borderColor: 'black', borderWidth: 3}}>
-            <Text>{title}</Text> 
-            <Text>{text}</Text>        
+        <View style = {displayBox.container}>
+            <Text style = {displayBox.titleText}>
+                {title}
+            </Text> 
+            <Text style = {displayBox.contentText}>
+                {text}
+            </Text>        
         </View>
 
     )

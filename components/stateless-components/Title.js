@@ -1,6 +1,6 @@
 import React from 'react'
 import {Text, View} from 'react-native'
-import panelStyles from '../../modules/Styles'
+import {titleStyle} from '../../modules/ComponentStyles'
 
 
 /**
@@ -8,10 +8,9 @@ import panelStyles from '../../modules/Styles'
  * @param {string} title - the text to be displayed
  */
 const Title = ({title}) => {
-    const style = panelStyles
     return(
-        <View style = {[style.container, style.standardAlignment]}>
-            <Text style = {[style.title, style.standardAlignment]}>
+        <View style = {titleStyle.container}>
+            <Text style = {titleStyle.text}>
                 {title}
             </Text>
         </View>
