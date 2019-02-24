@@ -5,11 +5,15 @@ import {errorText} from '../../modules/ComponentStyles'
 
 /** Text meant for error messages to be displayed on the screen */
 const ErrorText = ({text}) => {
+
     return(
         <Text style = {errorText}>{text}</Text>
     )
 }
 
-ErrorText.propTypes = { text: PropTypes.string } /** The text to be displayed */
+ErrorText.propTypes = { 
+    /** The text to be displayed */
+    text: PropTypes.string 
+} 
 
 export default ErrorText;

@@ -10,6 +10,31 @@ import PropTypes from 'prop-types'
  */
 
  class TitleContentDivider extends Component{
+
+    static propTypes = {
+        /** The title that will be presented*/
+        title: PropTypes.string.isRequired,
+    
+        /** The flex value the title part will have
+         * Shares space with the contentFlex value
+         * Shared space will be divided proportional to titleFlex:contentFlex
+        */
+        titleFlex: PropTypes.number,
+    
+        /** The flex value the content part will have*/
+        contentFlex: PropTypes.number,
+    
+        /** The typical options for alignment applied to the content part of the component*/
+        contentAlignment: PropTypes.oneOf(['flex-start', 'center', 'flex-end', 'stretch']),
+    }
+    
+    static defaultProps = {
+        /** Default title to content division is 3:5  with alignment 'center'*/
+        titleFlex: 3,
+        contentFlex: 5,
+        contentAlignment: 'center'
+    }
+    
     constructor(props){
         super(props);
     }
@@ -29,31 +54,6 @@ import PropTypes from 'prop-types'
         )
     }
 }
-
-TitleContentDivider.propTypes = {
-    /** The title that will be presented*/
-    title: PropTypes.string.isRequired,
-
-    /** The flex value the title part will have
-     * Shares space with the contentFlex value
-     * Shared space will be divided proportional to titleFlex:contentFlex
-    */
-    titleFlex: PropTypes.number,
-
-    /** The flex value the content part will have*/
-    contentFlex: PropTypes.number,
-
-    /** The typical options for alignment applied to the content part of the component*/
-    contentAlignment: PropTypes.oneOf(['flex-start', 'center', 'flex-end', 'stretch']),
-}
-
-TitleContentDivider.defaultProps = {
-    /** Default title to content division is 3:5  with alignment 'center'*/
-    titleFlex: 3,
-    contentFlex: 5,
-    contentAlignment: 'center'
-}
-
 
 
 export default TitleContentDivider;

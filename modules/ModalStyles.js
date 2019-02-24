@@ -1,7 +1,9 @@
 import {colors} from './StyleBase'
 import panelStyles from './Styles'
 
+/** Standard style for the loading modal */
 export const loadingStyle = {
+    /** Background style */
       modalBackground: [
           panelStyles.align,
           {
@@ -9,6 +11,7 @@ export const loadingStyle = {
             backgroundColor: '#00000040'
         }
       ],
+      /** Box for the activity indicator */
       activityInicator: [
           panelStyles.align,
           {

@@ -13,6 +13,29 @@ import TextField from '../stateless-components/TextField'
 
 class SearchScreen extends Component{
 
+    static propTypes = {
+        /** Title of the screen, preferably what to be searched */
+        title: PropTypes.string.isRequired,
+    
+        /** Placeholder text of the input field*/
+        placeholder: PropTypes.string,
+    
+        /** 
+         * Callback function to be called when the search button is pressed
+         * Need to accept a parameter of type string
+        */
+        onPress: PropTypes.func.isRequired,
+    
+        /** If the current state is in a loading state */
+        loading: PropTypes.bool
+    }
+    
+    /** Default values of the props */
+    static defaultProps = { 
+        placeholder: 'Enter text',
+        loading: false
+    }
+
     /** initializes the the state text and binds the setText function to this component */
     constructor(props){
         super(props);
@@ -48,29 +71,6 @@ class SearchScreen extends Component{
                 </TitleContentDivider> 
         )
     }
-}
-
-SearchScreen.propTypes = {
-    /** Title of the screen, preferably what to be searched */
-    title: PropTypes.string.isRequired,
-
-    /** Placeholder text of the input field*/
-    placeholder: PropTypes.string,
-
-    /** 
-     * Callback function to be called when the search button is pressed
-     * Need to accept a parameter of type string
-    */
-    onPress: PropTypes.func.isRequired,
-
-    /** If the current state is in a loading state */
-    loading: PropTypes.bool
-}
-
-/** Default values of the props */
-SearchScreen.defaultProps = { 
-    placeholder: 'Enter text',
-    loading: false
 }
 
 export default SearchScreen;
