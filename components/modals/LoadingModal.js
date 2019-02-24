@@ -1,29 +1,37 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-  Modal,
-  ActivityIndicator
-} from 'react-native';
+import React from 'react'
+import {View, Modal, ActivityIndicator} from 'react-native'
+import {loadingStyle} from '../../modules/ModalStyles'
+import PropTypes from 'prop-types'
 
-const LoadingModal = props => {
-    const {
-        loading,
-        ...attributes
-    } = props;
+/**
+ * Modal that covers the screen and shows a loading animation based on the parameter loading
+ * @param {bool} loading - show modal
+ */
+const LoadingModal = ({loading}) => {
+
     return (
         <Modal
         transparent={true}
         animationType={'none'}
         visible={loading}
-        onRequestClose={() => {console.log('close modal')}}>
-        <View >
-            <ActivityIndicator
-            animating={loading} />
-        </View>
-    </Modal>
-    )
+        onRequestClose={() => {console.log('close modal')}}
+        >
+            <View style = {loadingStyle.modalBackground}>
+                <ActivityIndicator
+                style = {loadingStyle.activityInicator}
+                animating={loading} 
+                />
+            </View>
+        </Modal>
+        )
 }
 
+LoadingModal.propTypes = {
+
+    /**
+     * Shows the loading animation if true
+     */
+    loading: PropTypes.bool.isRequired
+}
 
 export default LoadingModal;

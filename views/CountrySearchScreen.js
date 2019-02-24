@@ -53,8 +53,8 @@ class CountrySearchScreen extends Component {
         return(
             <SearchScreen title = 'SEARCH BY COUNTRY' 
                 placeholder = 'Enter a country' 
-                onPress = {this.onSearch} l
-                oading = {this.state.isLoading}
+                onPress = {this.onSearch} 
+                loading = {this.state.isLoading}
             >
                 <ErrorText text = {this.state.errorMsg}/>
             </SearchScreen>
