@@ -1,12 +1,12 @@
 import {createStackNavigator, createAppContainer} from 'react-navigation';
-import HomeScreen from './views/HomeScreen'
-import CitySearchScreen from './views/CitySearchScreen'
-import CityPopulationScreen from './views/CityPopulationScreen'
-import CountrySearchScreen from './views/CountrySearchScreen';
-import CityListScreen from './views/CityListScreen';
+import HomeScreen from './app/views/HomeScreen'
+import CitySearchScreen from './app/views/CitySearchScreen'
+import CityPopulationScreen from './app/views/CityPopulationScreen'
+import CountrySearchScreen from './app/views/CountrySearchScreen';
+import CityListScreen from './app/views/CityListScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React from 'react'
-import {colors} from './modules/StyleBase'
+import {colors} from './app/modules/StyleBase'
 
 /**
  * Handles the logic of switching between screens
