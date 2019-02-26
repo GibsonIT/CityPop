@@ -4,7 +4,9 @@ import DisplayBox from '../components/stateless-components/DisplayBox'
 import {formatNumber} from '../services/StringFormatter'
 
 /**
- * Displays the City name as a title then the population of the city below
+ * @class CityPopulationScreen
+ * @extends React.Component
+ * @classdesc Displays the City name as a title then the population of the city below
  */
 class CityPopulationScreen extends Component{
     constructor(props){
@@ -13,7 +15,7 @@ class CityPopulationScreen extends Component{
             /** City name preferrably in the form of a string, displayed in the title*/
             city: this.props.navigation.getParam('city'),
 
-            /** Population of the city displayed, formatted with spaces each three numbers (ex. 1 234 567) */
+            /** Population of the city displayed, formatted with spaces as thousands separator (ex. 1 234 567) */
             population: this.props.navigation.getParam('population')
             }
     }

@@ -6,7 +6,7 @@ import {colors} from '../../modules/StyleBase'
 
 
 /**
- * Button returns a stateless component that is a pressable button that calls onPress when pressed
+ * Button is a stateless component that is a pressable button that calls onPress when pressed
  */
 
 const Button = ({title, onPress}) => {

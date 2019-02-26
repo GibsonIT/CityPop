@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native'
+import {View} from 'react-native'
 import Title from '../stateless-components/Title';
 import PropTypes from 'prop-types'
 
 /**
- * TitleContentDivider is a component that is divided into a title part and a content part.
+ * @class TitleContentDivider
+ * @extends React.Component
+ * @classdesc TitleContentDivider is a component that is divided into a title part and a content part.
  * The content is the children of the component.
  * The title to content division can be adjusted using the contentFlex and titleFlex values (used as normal flex values in style).
  */

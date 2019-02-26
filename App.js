@@ -9,7 +9,8 @@ import React from 'react'
 import {colors} from './app/modules/StyleBase'
 
 /**
- * Handles the logic of switching between screens
+ * Handles the logic of switching between screens.
+ * Has a list of all possible screens
  */
 const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen},
@@ -23,9 +24,11 @@ const MainNavigator = createStackNavigator({
   DisplayPopulation: {screen: CityPopulationScreen}    
 },
 {
+  //Default screen
   initialRouteName: 'Home',
 
   defaultNavigationOptions: {
+    //Sets backbutton
     headerBackImage: ( 
       <Icon name={"arrow-left"}  size={30} color={colors.primary} />),
       
@@ -43,6 +46,7 @@ const MainNavigator = createStackNavigator({
       }
   
     ,
+    //Standard title
     headerTitle: "CityPop",
     headerTitleStyle: {
       color: colors.primary

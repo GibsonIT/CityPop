@@ -1,6 +1,8 @@
 import React from 'react'
 import {Text, View} from 'react-native'
+import PropTypes from 'prop-types'
 import {titleStyle} from '../../modules/ComponentStyles'
+
 
 
 /**
@@ -15,6 +17,13 @@ const Title = ({title}) => {
             </Text>
         </View>
     )
+}
+
+Title.propTypes = {
+    /**
+     * The title that will be displayed
+     */
+    title: PropTypes.string.isRequired
 }
 
 export default Title;

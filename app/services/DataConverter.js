@@ -44,6 +44,8 @@ export function convertToName(searchData, countryCode){
              var dataArray = [];
              data.forEach(element => {
                 if(element.countryCode = countryCode){
+                    // if population is 0 we can assume that all places after are too
+                    // (since its ordered by poulation) and therefore return 
                     if(element.population == 0){
                         return dataArray;
                     }
