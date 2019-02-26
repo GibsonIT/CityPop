@@ -63,3 +63,8 @@ The app can be run with expo using an[ Android device emulator](https://docs.exp
 
 ### Build .apk and .ipa
 On how to build new installation files for Android and iOS read [this](https://docs.expo.io/versions/latest/distribution/building-standalone-apps/).
+
+## License
+This software is under MIT License.
+
+See: [License.md](License.md)
