@@ -47,7 +47,7 @@ A QR-code will then show in the Node cmd and a new tab/window will open in your 
 On your android device, open the expo app and press 'Scan QR code' and scan the code. The app will then be built, loaded to your device and run. Any changes then made in the project files will then restart the app with the new files upon saving the file.
 
 ## <a id="installandroid"></a> Installation on Android
-Download the citypop.apk file and transfer it to your android device or directly download it on your device. Locate teh file on your device, open it and press install. The app opening might require special permission to install the app which you can change in app settings. When installed, the app will appear with your other apps under the name 'CityPop'. 
+[Download citypop.apk](../../raw/local-master/citypop.apk) and transfer it to your android device or directly download it on your device. Locate the file on your device, open it and press install. The app opening might require special permission to install the app which you can change in app settings. When installed, the app will appear with your other apps under the name 'CityPop'. 
 
 
 ## Project notes
@@ -61,5 +61,10 @@ The project can technically be run on iOS with a process similar to the android 
 The app can be run with expo using an[ Android device emulator](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/) or [iOS device simulator](https://docs.expo.io/versions/latest/introduction/installation/#ios-simulator) if no physical devices are available.
 
 
-### Build .apk and .ipa
+### Build new .apk and .ipa
 On how to build new installation files for Android and iOS read [this](https://docs.expo.io/versions/latest/distribution/building-standalone-apps/).
+
+## License
+This software is under MIT License.
+
+See: [License.md](LICENSE.md)
